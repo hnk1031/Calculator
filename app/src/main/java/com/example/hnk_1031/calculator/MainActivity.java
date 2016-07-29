@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //変数初期化
+        //各変数を初期化
         number1 = 0;
         number2 = 0;
         answer = 0;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         opeText = (TextView) findViewById(R.id.ope);
         answerText = (TextView) findViewById(R.id.answer);
 
-        //ラベル値を初期状態
+        //ラベル値を初期状態に
         num1Text.setText("0");
         num2Text.setText("");
         opeText.setText("");
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //「0」ボタンが押された時
     public void bt0(View v) {
         if (ope == 0){
             number1 = number1 * 10 + 0;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「1」ボタンが押された時
     public void bt1(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 1;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「2」ボタンが押された時
     public void bt2(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 2;
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「3」ボタンが押された時
     public void bt3(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 3;
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「4」ボタンが押された時
     public void bt4(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 4;
@@ -92,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「5」ボタンが押された時
     public void bt5(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 5;
@@ -102,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「6」ボタンが押された時
     public void bt6(View v) {
         if (ope == 0) {
             number1 = number1 * 10 + 6;
@@ -112,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「7」ボタンが押された時
     public void bt7(View v) {
         if (ope == 0){
             number1 = number1 * 10 + 7;
@@ -122,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「8」ボタンが押された時
     public void bt8(View v) {
         if (ope == 0){
             number1 = number1 * 10 + 8;
@@ -132,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「9」ボタンが押された時
     public void bt9(View v) {
         if (ope == 0){
             number1 = number1 * 10 + 9;
@@ -142,30 +152,35 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「+」ボタンが押された時
     public void btplus(View v) {
         ope=1;
         opeText.setText("+");
         num2Text.setText("");
     }
 
+    //「-」ボタンが押された時
     public void btminus(View v){
         ope=2;
         opeText.setText("-");
         num2Text.setText("");
     }
 
+    //「×」ボタンが押された時
     public void btmultiply(View v) {
         ope=3;
         opeText.setText("×");
         num2Text.setText("");
     }
 
+    //「÷」ボタンが押された時
     public void btdevide(View v) {
         ope=4;
         opeText.setText("÷");
         num2Text.setText("");
     }
 
+    //「=」ボタンが押された時
     public void btequal(View v) {
         if (ope == 1) {
             answer=number1+number2;
@@ -186,8 +201,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //「Clear」ボタンが押された時
     public void btclear(View v){
+        number1=0;
+        number2=0;
         answer=0;
+        ope=0;
         num1Text.setText("");
         num2Text.setText("");
         opeText.setText("");
